@@ -8,4 +8,4 @@ You can view the challenges in the code-challenges folder.
 
   * [Reverse Array](https://github.com/DanaAbbadi/data-structures-and-algorithms-python/tree/master/data_structures_and_algorithms/challenges/array_reverse)
   * [Array Shift ](https://github.com/DanaAbbadi/data-structures-and-algorithms-python/tree/master/data_structures_and_algorithms/challenges/array_shift)
-  * [Array Binary Search](https://github.com/DanaAbbadi/data-structures-and-algorithms-python/tree/master/data_structures_and_algorithms/challenges/array_reverse)
+  * [Array Binary Search](https://github.com/DanaAbbadi/data-structures-and-algorithms-python/tree/master/data_structures_and_algorithms/challenges/array_binary_search)
