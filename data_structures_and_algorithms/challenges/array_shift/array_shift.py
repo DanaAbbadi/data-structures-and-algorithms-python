@@ -13,7 +13,7 @@ def insert_shift_array(arr,val):
       return arr
   
   else:
-    return "Enter a number to shift the list {}".format(arr)
+    return arr
     
 
 

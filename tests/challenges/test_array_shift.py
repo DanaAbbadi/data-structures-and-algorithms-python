@@ -23,5 +23,5 @@ def test_edge_case():
 
 def test_edge_case2():
     actual=insert_shift_array([1,2,4], '5')
-    expected="Enter a number to shift the list [1, 2, 4]"
+    expected= [1,2,4]
     assert actual == expected 
