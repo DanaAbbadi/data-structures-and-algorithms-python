@@ -1,4 +1,4 @@
-# Reverse an Array
+# Array Shift
 
 This program takes an array and a number from the user and then inserts the number at the center of the array
 
@@ -12,4 +12,4 @@ To reach the middle of the array, we compare the given number with the valyes in
 
 ## Solution
 
-![reverse](/assets/challange2.PNG)
+![shift](/assets/challange2.PNG)
