@@ -17,3 +17,4 @@ The challenge was mainly about accessing the linked list and move between nodes
 2. **__str__** method which takes in no arguments and returns a string representing all the values in the Linked List.
 
 3. **Includes** method which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+4. **Append** method which takes any value as an argument and adds a new node with that value to the end of the list. 

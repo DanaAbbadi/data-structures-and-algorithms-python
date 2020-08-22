@@ -12,6 +12,12 @@ class LinkedList :
         self.head = None
    
     def insert(self,value):
+        """
+        Takes any value as an argument and adds a new node with that value to the head of the list.
+        
+        Arguments:
+            a value to be added to the list
+        """
         new_node = Node(value)
         if not self.head:
             self.head=new_node
@@ -20,6 +26,12 @@ class LinkedList :
            self.head = new_node    
    
     def append(self,value):
+        """
+        Takes any value as an argument and adds a new node with that value to the end of the list.
+        
+        Arguments:
+            a value to be added to the list
+        """
         new_node = Node(value)
         if not self.head:
             self.head = new_node
@@ -42,6 +54,12 @@ class LinkedList :
    
    
     def includes (self,value):
+        """
+        method which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node's value somewhere within the list.
+        
+        Arguments:
+            a value to search for
+        """
         if self.head == None:
             return False
         else:
