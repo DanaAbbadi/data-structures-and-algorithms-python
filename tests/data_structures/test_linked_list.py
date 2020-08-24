@@ -1,6 +1,4 @@
-from data_structures_and_algorithms.data_structures.linked_list.linked_list import (
-    LinkedList,Node,
-)
+from data_structures_and_algorithms.data_structures.linked_list.linked_list import (LinkedList,Node,)
 
 
 def test_empty_list():
@@ -80,3 +78,42 @@ def test_insert_after_last_node():
     ll.append(9)
     ll.insert_after(9,10)
     assert ll.__str__() == '5->6->8->9->10-> NULL'
+
+
+def test_kthFromEnd():
+    fruits = LinkedList()
+    fruits.append('apple')
+    fruits.append('orange')
+    fruits.append('berries')
+    LinkedList.len_of_list = 3
+    assert fruits.kthFromEnd(0) == 'berries'
+
+def test_kthFromEnd_k_greater():
+    fruits = LinkedList()
+    fruits.append('apple')
+    fruits.append('orange')
+    fruits.append('berries')
+    LinkedList.len_of_list = 3
+    assert fruits.kthFromEnd(7) == 'The index you entered is invalid'
+
+def test_kthFromEnd_k_equal():
+    fruits = LinkedList()
+    fruits.append('apple')
+    fruits.append('orange')
+    fruits.append('berries')
+    LinkedList.len_of_list = 3
+    assert fruits.kthFromEnd(4) == 'The index you entered is invalid'
+
+def test_kthFromEnd_k_negative():
+    fruits = LinkedList()
+    fruits.append('apple')
+    fruits.append('orange')
+    fruits.append('berries')
+    LinkedList.len_of_list = 3
+    assert fruits.kthFromEnd(-1) == 'The index you entered is invalid'
+
+def test_kthFromEnd_Length_1():
+    fruits = LinkedList()
+    fruits.append('apple')
+    LinkedList.len_of_list = 1
+    assert fruits.kthFromEnd(0) == 'apple'

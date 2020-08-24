@@ -6,7 +6,9 @@ class Node:
     def __str__(self): 
         return self.value
 
-class LinkedList :
+class LinkedList(Node) :
+
+    len_of_list=0
 
     def __init__(self):
         self.head = None
@@ -20,6 +22,8 @@ class LinkedList :
         """
         try:
             new_node = Node(value)
+            LinkedList.len_of_list += 1
+
             if not self.head:
                 self.head=new_node
             else:
@@ -27,6 +31,7 @@ class LinkedList :
                 self.head = new_node    
         except Exception as error:
             print(f'this is error in this method {error}')
+
     def append(self,value):
         """
         Takes any value as an argument and adds a new node with that value to the end of the list.
@@ -36,6 +41,8 @@ class LinkedList :
         """
         try:
             new_node = Node(value)
+            LinkedList.len_of_list += 1
+
             if not self.head:
                 self.head = new_node
             else:
@@ -45,6 +52,7 @@ class LinkedList :
                 current.next = new_node
         except Exception as error:
             print(f'this is error in this method {error}')
+
   
     def __str__(self):  
         current = self.head
@@ -57,7 +65,7 @@ class LinkedList :
    
    
    
-    def includes (self,value):
+    def includes(self,value):
         """
         method which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node's value somewhere within the list.
         
@@ -89,6 +97,8 @@ class LinkedList :
         '''
         try:
             new_node = Node(newValue)
+            LinkedList.len_of_list += 1
+
             current = self.head
             if not self.head:
                 self.head = new_node
@@ -126,6 +136,8 @@ class LinkedList :
         '''
         try:
             new_node = Node(newVal)
+            LinkedList.len_of_list += 1
+             
             current = self.head
             if not self.head:
                     self.head = new_node
@@ -145,15 +157,58 @@ class LinkedList :
                 return "this node doesn't exist!"
         except Exception as error:
             print(f'this is error in this method {error}')
-                        
+
+    def kthFromEnd(self,k):
+        try:
+            if self.head:
+                print(LinkedList.len_of_list)
+                if k <= LinkedList.len_of_list and k>-1:
+                        print('it is')
+                        current = self.head
+                        postion = LinkedList.len_of_list  - k
+                        print('pos',postion)
+
+                        for i in range(postion-1):
+                            print('current',current)
+                            current = current.next
+                        return current.value
+
+
                 
+                else:
+                        return 'The index you entered is invalid'
+
+            else:
+                return 'Linked List is empty'
+        except Exception as error:
+            print(f'this is error in this method {error}')
+
+    def middle(self):
+        if (LinkedList.len_of_list):
+            middle = LinkedList.len_of_list //2
+            current = self.head
+            for i in range(middle):
+                current=current.next 
+            return current.value
+        else:
+            return 'List is empty'
+
+
+
+
 if __name__ == "__main__":
     fruits = LinkedList()
     fruits.append('apple')
     fruits.append('orange')
+    fruits.append('banana')
     fruits.append('berries')
+    fruits.append('grapes')
 
-    fruits.insert_before('apple','banana')
 
+    # fruits.insert_before('apple','banana')
     # print( fruits.includes('banana'))
-    print(fruits)
+    # print(fruits)
+    print(fruits.kthFromEnd(-1))
+    print(fruits.middle())
+
+    
