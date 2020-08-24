@@ -85,15 +85,20 @@ def test_kthFromEnd():
     fruits.append('apple')
     fruits.append('orange')
     fruits.append('berries')
-    LinkedList.len_of_list = 3
     assert fruits.kthFromEnd(0) == 'berries'
+
+def test_kthFromEnd_middle():
+    fruits = LinkedList()
+    fruits.append('apple')
+    fruits.append('orange')
+    fruits.append('berries')
+    assert fruits.kthFromEnd(1) == 'orange'
 
 def test_kthFromEnd_k_greater():
     fruits = LinkedList()
     fruits.append('apple')
     fruits.append('orange')
     fruits.append('berries')
-    LinkedList.len_of_list = 3
     assert fruits.kthFromEnd(7) == 'The index you entered is invalid'
 
 def test_kthFromEnd_k_equal():
@@ -101,15 +106,13 @@ def test_kthFromEnd_k_equal():
     fruits.append('apple')
     fruits.append('orange')
     fruits.append('berries')
-    LinkedList.len_of_list = 3
-    assert fruits.kthFromEnd(4) == 'The index you entered is invalid'
+    assert fruits.kthFromEnd(3) == 'The index you entered is invalid'
 
 def test_kthFromEnd_k_negative():
     fruits = LinkedList()
     fruits.append('apple')
     fruits.append('orange')
     fruits.append('berries')
-    LinkedList.len_of_list = 3
     assert fruits.kthFromEnd(-1) == 'The index you entered is invalid'
 
 def test_kthFromEnd_Length_1():
