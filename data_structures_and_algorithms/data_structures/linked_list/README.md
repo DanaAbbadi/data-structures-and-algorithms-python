@@ -18,3 +18,6 @@ The challenge was mainly about accessing the linked list and move between nodes
 
 3. **Includes** method which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 4. **Append** method which takes any value as an argument and adds a new node with that value to the end of the list. 
+5. **Insert_before** method which Add a new node with the given newValue immediately before the first value node.
+6. **Insert_after** method which Add a new node with the given newValue immediately after the first value node.
+   

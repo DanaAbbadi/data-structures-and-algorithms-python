@@ -43,3 +43,40 @@ def test_dender_str():
     ll.insert(6)
     ll.insert(7)
     assert ll.__str__() == '7->6->5-> NULL'
+
+def test_insert_before():
+    ll = LinkedList()
+    ll.insert(5)
+    ll.insert(6)
+    ll.insert(8)
+    ll.insert(9)
+    ll.insert_before(6,7)
+    assert ll.__str__() == '9->8->7->6->5-> NULL'
+
+
+def test_insert_before_first_node():
+    ll = LinkedList()
+    ll.append(5)
+    ll.append(6)
+    ll.append(8)
+    ll.append(9)
+    ll.insert_before(5,4)
+    assert ll.__str__() == '4->5->6->8->9-> NULL'
+
+def test_insert_after():
+    ll = LinkedList()
+    ll.insert(5)
+    ll.insert(6)
+    ll.insert(8)
+    ll.insert(9)
+    ll.insert_after(8,7)
+    assert ll.__str__() == '9->8->7->6->5-> NULL'
+
+def test_insert_after_last_node():
+    ll = LinkedList()
+    ll.append(5)
+    ll.append(6)
+    ll.append(8)
+    ll.append(9)
+    ll.insert_after(9,10)
+    assert ll.__str__() == '5->6->8->9->10-> NULL'
