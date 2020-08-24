@@ -18,13 +18,15 @@ class LinkedList :
         Arguments:
             a value to be added to the list
         """
-        new_node = Node(value)
-        if not self.head:
-            self.head=new_node
-        else:
-           new_node.next = self.head
-           self.head = new_node    
-   
+        try:
+            new_node = Node(value)
+            if not self.head:
+                self.head=new_node
+            else:
+                new_node.next = self.head
+                self.head = new_node    
+        except Exception as error:
+            print(f'this is error in this method {error}')
     def append(self,value):
         """
         Takes any value as an argument and adds a new node with that value to the end of the list.
@@ -32,15 +34,17 @@ class LinkedList :
         Arguments:
             a value to be added to the list
         """
-        new_node = Node(value)
-        if not self.head:
-            self.head = new_node
-        else:
-            current = self.head
-            while current.next:
-                current = current.next
-            current.next = new_node
-  
+        try:
+            new_node = Node(value)
+            if not self.head:
+                self.head = new_node
+            else:
+                current = self.head
+                while current.next:
+                    current = current.next
+                current.next = new_node
+        except Exception as error:
+            print(f'this is error in this method {error}')
   
     def __str__(self):  
         current = self.head
@@ -60,23 +64,87 @@ class LinkedList :
         Arguments:
             a value to search for
         """
-        if self.head == None:
-            return False
-        else:
-            current = self.head
-            while current:
-                if current.value == value:
-                    return True
-                else :
-                    current = current.next    
-            return False        
+        try:
+            if self.head == None:
+                return False
+            else:
+                current = self.head
+                while current:
+                    if current.value == value:
+                        return True
+                    else :
+                        current = current.next    
+                return False 
+        except Exception as error:
+            print(f'this is error in this method {error}')
+    
 
+    def insert_before(self,value,newValue):
+        '''
+        Add a new node with the given newValue immediately before the first value node 
+
+        Arguments:
+            value   --  Existing node
+            new_val --  new node to add
+        '''
+        try:
+            new_node = Node(newValue)
+            current = self.head
+            if not self.head:
+                self.head = new_node
+            else:
+                
+                while current.next != None:
+                    if current.next.value == value:
+                        swap = current.next
+                        current.next = new_node
+                        new_node.next = swap
+                        return 
+                    else:
+                        current = current.next
+
+                return "this node doesn't exist!"
+        except Exception as error:
+            print(f'this is error in this method {error}')        
+
+    def insert_after(self, value, newVal):
+        '''
+        Add a new node with the given newValue immediately after the first value node 
+
+        Arguments:
+            value   --  Existing node
+            new_val --  new node to add
+        '''
+        try:
+            new_node = Node(newVal)
+            current = self.head
+            if not self.head:
+                    self.head = new_node
+            else:
+                current = self.head
+                while current.next != None:
+                    if current.next.value == value:
+                        current = current.next
+                        temp = current.next
+                        current.next = new_node
+                        new_node.next = temp
+                        return 
+                        
+                    else:
+                        current = current.next
+                        
+                return "this node doesn't exist!"
+        except Exception as error:
+            print(f'this is error in this method {error}')
                         
                 
 if __name__ == "__main__":
     fruits = LinkedList()
     fruits.append('apple')
-    fruits.insert('banana')
     fruits.append('orange')
-    print( fruits.includes('banana'))
+    fruits.append('berries')
+
+    fruits.insert_after('berries','banana')
+
+    # print( fruits.includes('banana'))
     print(fruits)
