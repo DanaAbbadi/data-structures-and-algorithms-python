@@ -93,7 +93,16 @@ class LinkedList :
             if not self.head:
                 self.head = new_node
             else:
-                
+                # To add before the first node
+                if self.head.value == value:
+                    swap = self.head
+                    self.head = new_node
+                    new_node.next = swap
+                    return 
+                else:
+                    current = self.head
+
+                # To add anywhere in the list
                 while current.next != None:
                     if current.next.value == value:
                         swap = current.next
@@ -144,7 +153,7 @@ if __name__ == "__main__":
     fruits.append('orange')
     fruits.append('berries')
 
-    fruits.insert_after('berries','banana')
+    fruits.insert_before('apple','banana')
 
     # print( fruits.includes('banana'))
     print(fruits)
