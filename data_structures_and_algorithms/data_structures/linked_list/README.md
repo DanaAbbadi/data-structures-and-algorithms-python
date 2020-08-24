@@ -20,4 +20,8 @@ The challenge was mainly about accessing the linked list and move between nodes
 4. **Append** method which takes any value as an argument and adds a new node with that value to the end of the list. 
 5. **Insert_before** method which Add a new node with the given newValue immediately before the first value node.
 6. **Insert_after** method which Add a new node with the given newValue immediately after the first value node.
+7. **Kth-from the end** method which returns the k-th value from the end of a linked list.
+8. **middle** method that finds the node at the middle of the Linked List.
+
+
    
