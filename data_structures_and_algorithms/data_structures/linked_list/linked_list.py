@@ -8,10 +8,10 @@ class Node:
 
 class LinkedList(Node) :
 
-    len_of_list=0
 
-    def __init__(self):
+    def __init__(self,len_of_list=0):
         self.head = None
+        self.len_of_list=0
    
     def insert(self,value):
         """
@@ -22,7 +22,7 @@ class LinkedList(Node) :
         """
         try:
             new_node = Node(value)
-            LinkedList.len_of_list += 1
+            self.len_of_list += 1
 
             if not self.head:
                 self.head=new_node
@@ -41,7 +41,7 @@ class LinkedList(Node) :
         """
         try:
             new_node = Node(value)
-            LinkedList.len_of_list += 1
+            self.len_of_list += 1
 
             if not self.head:
                 self.head = new_node
@@ -97,7 +97,7 @@ class LinkedList(Node) :
         '''
         try:
             new_node = Node(newValue)
-            LinkedList.len_of_list += 1
+            self.len_of_list += 1
 
             current = self.head
             if not self.head:
@@ -136,7 +136,7 @@ class LinkedList(Node) :
         '''
         try:
             new_node = Node(newVal)
-            LinkedList.len_of_list += 1
+            self.len_of_list += 1
              
             current = self.head
             if not self.head:
@@ -161,15 +161,11 @@ class LinkedList(Node) :
     def kthFromEnd(self,k):
         try:
             if self.head:
-                print(LinkedList.len_of_list)
-                if k <= LinkedList.len_of_list and k>-1:
-                        print('it is')
+                if k < self.len_of_list and k>-1:
                         current = self.head
-                        postion = LinkedList.len_of_list  - k
-                        print('pos',postion)
+                        postion = self.len_of_list  - k
 
                         for i in range(postion-1):
-                            print('current',current)
                             current = current.next
                         return current.value
 
@@ -184,8 +180,8 @@ class LinkedList(Node) :
             print(f'this is error in this method {error}')
 
     def middle(self):
-        if (LinkedList.len_of_list):
-            middle = LinkedList.len_of_list //2
+        if (self.len_of_list):
+            middle = self.len_of_list //2
             current = self.head
             for i in range(middle):
                 current=current.next 
@@ -208,7 +204,7 @@ if __name__ == "__main__":
     # fruits.insert_before('apple','banana')
     # print( fruits.includes('banana'))
     # print(fruits)
-    print(fruits.kthFromEnd(-1))
-    print(fruits.middle())
+    print(fruits.kthFromEnd(5))
+    # print(fruits.middle())
 
     
