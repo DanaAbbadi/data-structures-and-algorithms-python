@@ -28,7 +28,6 @@ def to_sorted(a_list,b_list):
 
     first = a_list.head if a_list.head.value <= b_list.head.value else b_list.head
     second = b_list.head if a_list.head.value <= b_list.head.value else a_list.head
-    print(first.__str__())
     
     while first:
         sorted_list.append(first.value)
@@ -52,7 +51,7 @@ if __name__ == '__main__':
     veggies.append('Broccoli')
     veggies.append('Mushrooms')
     
-    print(zipLists(fruits,veggies))
+    # print(zipLists(fruits,veggies))
 
     num1 = LinkedList()
     num1.append(7)
@@ -64,4 +63,4 @@ if __name__ == '__main__':
     num2.append(5)
     num2.append(6)
 
-    print('is sorted? ',to_sorted(num1,num2))
+    # print('is sorted? ',to_sorted(num1,num2))

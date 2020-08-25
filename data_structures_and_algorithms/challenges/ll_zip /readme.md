@@ -14,6 +14,6 @@ Example:
     List2 = head -> [5] -> [9] -> [4] -> X
     zipped_List = head -> [1] -> [5] -> [3] -> [9] -> [2] -> [4] -> X
 
-## Solution
+## Whiteboard
 
 ![shift](/assets/zipped.PNG)
