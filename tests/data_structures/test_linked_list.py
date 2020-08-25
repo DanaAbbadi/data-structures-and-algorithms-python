@@ -1,4 +1,4 @@
-from data_structures_and_algorithms.data_structures.linked_list.linked_list import (LinkedList,Node,)
+from data_structures_and_algorithms.data_structures.linked_list.linked_list_basic import (LinkedList,Node,)
 
 
 def test_empty_list():
