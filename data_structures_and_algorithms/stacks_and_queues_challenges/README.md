@@ -13,18 +13,6 @@ If you are still new to this concept, you can check out my notes [here](https://
 The challenge was mainly to distinguish between FIFO and FILO and also to utilize the Single-responsibility principle when writting the methods.
 
 
-## Whiteboard
-
-**Stack**
-
-![stack](/assets/stack.PNG)
-
-**Queue**
-
-![queue](/assets/queue.PNG)
-
-
-
 ## Methods
 
 ##### Stack methods:
@@ -43,3 +31,36 @@ The challenge was mainly to distinguish between FIFO and FILO and also to utiliz
 * **IsEmpty** - returns true when queue is empty otherwise returns false.
 
    
+## Whiteboard
+
+## **Stack**
+
+**Overview**
+
+![stack](/assets/stack.PNG)
+
+**Push Method**
+![stack](/assets/stacks/push.PNG)
+
+**Pop Method**
+![stack](/assets/stacks/pop.PNG)
+
+**Peek and isEmpty Methods**
+![stack](/assets/stacks/peek.PNG)
+
+
+
+
+## **Queue**
+
+**Overview**
+![queue](/assets/queue.PNG)
+
+**Enqueue Method**
+![queue](/assets/queues/enqueue.PNG)
+
+**Dequeue Method**
+![queue](/assets/queues/dequeue.PNG)
+
+**Peek and isEmpty Methods**
+![queue](/assets/queues/peek.PNG)
