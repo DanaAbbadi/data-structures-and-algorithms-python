@@ -24,4 +24,16 @@ The challenge was mainly about accessing the linked list and move between nodes
 8. **middle** method that finds the node at the middle of the Linked List.
 
 
-   
+## Whiteboard:
+
+### Append method:
+![append](/assets/linked_list/append.PNG)
+
+### Insert before/after:
+![append](/assets/linked_list/insert.PNG)
+
+### Inculde method:
+![append](/assets/linked_list/include.PNG)
+
+### Kth-from the end method:
+![append](/assets/linked_list/kth.PNG)
