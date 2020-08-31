@@ -9,7 +9,7 @@ The task is to implement a queue using stack. To satisfy FIFO property of a queu
 
 **Enqueue Method:**
 
-![enq](/assets/queues/with_stacks2.PNG)
+![enq](/assets/queues/with_stacks_enqueue.PNG)
 
 **Dequeue Method:**
 
