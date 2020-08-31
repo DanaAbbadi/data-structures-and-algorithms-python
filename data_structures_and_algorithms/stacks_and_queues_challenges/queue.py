@@ -1,5 +1,5 @@
-from data_structures_and_algorithms.stacks_and_queues_challenges.node import Node
-# from node import Node
+# from data_structures_and_algorithms.stacks_and_queues_challenges.node import Node
+from node import Node
 
 
 class Queue(Node):
@@ -44,7 +44,7 @@ class Queue(Node):
 
             return value
         
-        except AttributeError as error:
+        except AttributeError:
             return 'Queue is empty'
     
     def peek(self):
@@ -54,7 +54,7 @@ class Queue(Node):
         """
         try:
             return self.front.value
-        except AttributeError as error:
+        except AttributeError:
             return 'Queue is empty'
     
     def isEmpty(self):
