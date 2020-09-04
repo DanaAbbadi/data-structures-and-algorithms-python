@@ -29,21 +29,32 @@ In this challenge, I created a binary tree with the ability to add and search a 
 
 ##### Add method
 
-![img](/assets/tree/add.PNG)
+<!-- ![img](/assets/tree/add.PNG) -->
+<img src= '/assets/tree/add.PNG' style = 'height: 200px; width: 70%'>
+
 
 ##### Contains method
-![img](/assets/tree/contains.PNG)
+<!-- ![img](/assets/tree/contains.PNG) -->
+<img src= '/assets/tree/contains.PNG' style = 'height: 200px; width: 70%'>
+
+
+_____
 
 ### Binary Tree class:
 
 ##### Pre-Order Traverse
-![img](/assets/tree/preorder.PNG)
+<!-- ![img](/assets/tree/preorder.PNG) -->
+<img src= '/assets/tree/preorder.PNG' style = 'height: 200px; width: 70%'>
 
+___
 ##### In-Order Traverse
-![img](/assets/tree/inorder.PNG)
+<!-- ![img](/assets/tree/inorder.PNG) -->
+<img src= '/assets/tree/inorder.PNG' style = 'height: 200px; width: 70%'>
 
+____
 ##### Post-Order Traverse
-![img](/assets/tree/postorder.PNG)
+<!-- ![img](/assets/tree/postorder.PNG) -->
+<img src= '/assets/tree/postorder.PNG' style = 'height: 200px; width: 70%'>
 
 
 
