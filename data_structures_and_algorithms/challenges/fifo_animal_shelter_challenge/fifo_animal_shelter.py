@@ -38,18 +38,20 @@ class AnimalShelter(object):
 
         """
         try:
-            to_add = Animal(name,type)
-            if not self.front:
-                self.front = to_add
-            else:
-                iter_animal = self.front
+            if type == 'cat' or type == 'dog':
+                to_add = Animal(name,type)
+                if not self.front:
+                    self.front = to_add
+                else:
+                    iter_animal = self.front
 
-                while iter_animal.next is not None:
-                    iter_animal = iter_animal.next
+                    while iter_animal.next is not None:
+                        iter_animal = iter_animal.next
 
-                iter_animal.next = to_add
-                self.rear = iter_animal
-            self._length += 1
+                    iter_animal.next = to_add
+                    self.rear = iter_animal
+                self._length += 1
+            
         except Exception as error:
             return f'Method has an error: {error}'
 
@@ -97,6 +99,7 @@ if __name__ == "__main__":
     animals.enqueue('cherry','cat')
     animals.enqueue('oscar','dog')
     animals.enqueue('bo','dog')
+
 
 
 
