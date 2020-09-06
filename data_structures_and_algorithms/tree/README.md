@@ -30,12 +30,12 @@ In this challenge, I created a binary tree with the ability to add and search a 
 ##### Add method
 
 <!-- ![img](/assets/tree/add.PNG) -->
-<img src= '/assets/tree/add.PNG' style = 'height: 200px; width: 70%'>
+<img src= '/assets/tree/add.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
 
 ##### Contains method
 <!-- ![img](/assets/tree/contains.PNG) -->
-<img src= '/assets/tree/contains.PNG' style = 'height: 200px; width: 70%'>
+<img src= '/assets/tree/contains.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
 
 _____
@@ -44,17 +44,27 @@ _____
 
 ##### Pre-Order Traverse
 <!-- ![img](/assets/tree/preorder.PNG) -->
-<img src= '/assets/tree/preorder.PNG' style = 'height: 200px; width: 70%'>
+<img src= '/assets/tree/preorder.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
 ___
 ##### In-Order Traverse
 <!-- ![img](/assets/tree/inorder.PNG) -->
-<img src= '/assets/tree/inorder.PNG' style = 'height: 200px; width: 70%'>
+<img src= '/assets/tree/inorder.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
 ____
+
 ##### Post-Order Traverse
 <!-- ![img](/assets/tree/postorder.PNG) -->
-<img src= '/assets/tree/postorder.PNG' style = 'height: 200px; width: 70%'>
+<img src= '/assets/tree/postorder.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
+
+____
+
+##### Maximum Value in the Tree
+<!-- ![img](/assets/tree/postorder.PNG) -->
+<img src= '/assets/tree/max.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
+
+
+
 
 
 
