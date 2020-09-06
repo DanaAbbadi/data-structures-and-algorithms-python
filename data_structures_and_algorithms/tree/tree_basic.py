@@ -70,6 +70,33 @@ class BinaryTree:
         except Exception as error:
             return f'An error occured during excuting: {error}'
 
+    def find_maximum_value(self,current):
+        """
+        Finds the maximum value in the binary tree.
+        Will be called recursively with current equall to root.left and root.right
+        
+        """
+
+        if not self.root:
+            return 'Tree is empty'
+        
+        else:
+            max = current.value
+
+            if current.left != None:
+                left_max = self.find_maximum_value(current.left)
+                if left_max > max:
+                    max = left_max
+
+            if current.right != None:
+                right_max = self.find_maximum_value(current.right)
+                if right_max > max:
+                    max = right_max
+        
+        return max
+
+
+
 
 
 class BinarySearchTree(BinaryTree):
@@ -162,6 +189,24 @@ if __name__ == "__main__":
     post_order = tree.post_order(tree.root)
 
  
+    bt = BinaryTree()
+    bt.root = Node(2)
+
+    bt.root.left = Node(7)  
+    bt.root.right = Node(5)  
+
+    bt.root.left.left = Node(2)
+    bt.root.left.right = Node(6)
+    bt.root.left.right.left = Node(5)  
+    bt.root.left.right.right = Node(11)  
+
+
+    bt.root.right.right = Node(9)
+    bt.root.right.right.left = Node(4)  
+
+
+    print(bt.find_maximum_value(bt.root))
+    print(tree.find_maximum_value(tree.root))
 
 
 

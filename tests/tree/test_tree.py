@@ -48,6 +48,14 @@ def test_contains(prepare_bst):
     assert bst.contains(bst.root,100) == False
 
 
+def test_find_max(prepare_binary_tree):
+    bt = prepare_binary_tree
+
+    assert bt.find_maximum_value(bt.root) == 11
+
+def test_find_in_empty_tree():
+    bt = BinaryTree()
+    assert bt.find_maximum_value(bt.root) == 'Tree is empty'
 
 
 
@@ -93,5 +101,22 @@ def prepare_bst():
     return bst
 
 
+@pytest.fixture
+def prepare_binary_tree():
+    bt = BinaryTree()
+    bt.root = Node(2)
 
+    bt.root.left = Node(7)  
+    bt.root.right = Node(5)  
+
+    bt.root.left.left = Node(2)
+    bt.root.left.right = Node(6)
+    bt.root.left.right.left = Node(5)  
+    bt.root.left.right.right = Node(11)  
+
+
+    bt.root.right.right = Node(9)
+    bt.root.right.right.left = Node(4) 
+
+    return bt
 
