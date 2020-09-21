@@ -74,29 +74,29 @@ Let's trace the following list:  **[8,4,23,42,16,15]**
 
 * Call the merge function recursively for both lists, the left and right one.
    
-   - Left_list  = [4,8,23]
+   - Left_list  = [8,4,23]
    - Right_list = [42,16,15]
 
-* We will trace the left one, since the same methodology will be applied to the right one.
+* We will trace the left one, since the same process will be applied to the right one.
 * Again divide the left list into two lists, as follows:
   
-     - Left_list  = [4,8]
+     - Left_list  = [8,4]
      - Right_list = [23]
   
 <img src= '/assets/merge/2.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
-* Calling mergeSort again, for the left list it will be divided once again, however, for the right one, no more dividing it's ready to be compared, so it will wait for the left list to be sorted. The resulted lists from the left list are:
+* Calling mergeSort again, for the left list it will be divided once again, however, for the right one, no more dividing it's ready to be compared, so it will wait for the left list to be sorted. The resulted lists from deviding the left list are:
   
-     - Left_list  = [4]
-     - Right_list = [8]
-     - 
+     - Left_list  = [8]
+     - Right_list = [4]
+  
 <img src= '/assets/merge/3.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
-* Since the length of each list is 1, both lists will be compared together in order to be sorted.
+* Since the length of each list is 1, no more division. It's time to compare and sort them.
 
 <img src= '/assets/merge/4.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
-* Now back to right_list = [23], now it will be compared to the sorted list [4,8]:
+* Now back to right_list = [23], it will be compared to the sorted list [4,8]:
 
 <img src= '/assets/merge/5.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
