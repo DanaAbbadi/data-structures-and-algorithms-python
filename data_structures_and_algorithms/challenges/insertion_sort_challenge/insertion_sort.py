@@ -1,17 +1,21 @@
 def insertion_sort(arr):
-    for i in range(1,len(arr)):
-                     
-        key = arr[i] 
 
-        j = i - 1    
+    """
+     This function takes an array and sort it using insertion sort mechanism, then return it 
+    """
+    try:
+        for i in range(1,len(arr)):
+                        
+            key = arr[i] 
 
-        while j >= 0 and key < arr[j] :   
-                arr[j + 1] = arr[j]      
-                j -= 1                  
-        arr[j + 1] = key                
+            j = i - 1    
 
-    return arr
+            while j >= 0 and key < arr[j] :   
+                    arr[j + 1] = arr[j]      
+                    j -= 1                  
+            arr[j + 1] = key                
 
-arr = [8,5,13,9,90] 
-sorted = insertion_sort(arr) 
-print(sorted)
+        return arr
+    except Exception as error:
+        print(f'This {error} occures during running')
+
