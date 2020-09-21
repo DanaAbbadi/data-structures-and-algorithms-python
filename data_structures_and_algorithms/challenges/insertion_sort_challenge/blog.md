@@ -26,68 +26,81 @@ Insertion sort is the sorting mechanism where the sorted array is built having o
 
 ## Trace 
 
-Let's take the following array: [25, 17, 31, 13, 2], we will walk through iterations, starting with the first one:
+Let's take the following array: [8,4,23,42,16,15], we will walk through iterations:
+
+<img src= '/assets/sort/arr.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
 ##### First Iteration: 
 
-Compare 25 with 17. 
-  * Since 17 < 25, swap 17 and 25.
+Compare 4 with 8. 
+  * Since 4 < 8, swap them.
   * The array now looks like:
-     [17, 25, 31, 13, 2]
+     [4,8,23,42,16,15]
 
-<img src= 'https://s3-us-west-2.amazonaws.com/tutorials-image/first+iteration.png' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
+<img src= '/assets/sort/1.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
 ##### Second Iteration: 
 
-The next element is (31).
-  * Since 31> 25, no swapping takes place.
-  * Also, 31> 17, no swapping takes place
-  * 31 remains at its position.
+The next element is (23).
+  * Since 23 > 8, no swapping takes place.
+  * Also, 23 > 4, no swapping takes place
+  * 23 remains at its position.
   * The array after the Second iteration looks like:
 
-     [17, 25, 31, 13, 2]
+      [4,8,23,42,16,15]
 
-<img src= 'https://s3-us-west-2.amazonaws.com/tutorials-image/second+iteration.png' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
+<img src= '/assets/sort/2.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
 ##### Third Iteration: 
 
-The fourth element is (13),  compare it with its preceding elements.
+The next element is (42).
+  * Since 42 > 23, no swapping takes place.
+  * Also, 42 > 8, no swapping takes place
+  * 42 remains at its position.
+  * The array after the Second iteration looks like:
 
-  * Since 13< 31, we swap the two.
+      [4,8,23,42,16,15]
 
-    -  Array now becomes: [17, 25, 13, 31, 2].
+<img src= '/assets/sort/2.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
-  * Now the comparison is between 25 and 13. Since, 13 < 25, we swap the two.
+##### Forth Iteration: 
 
-    - The array becomes [17, 13, 25, 31, 2].
+The fourth element is (16),  compare it with its preceding elements.
 
-  * The last comparison for the iteration is now between 17 and 13. Since 13 < 17, we swap the two.
+  * Since 16 < 42, we swap the two.
 
-     - The array now becomes [13, 17, 25, 31, 2].
+    -  Array now becomes: [4,8,23,16,42,15].
 
-<img src= 'https://s3-us-west-2.amazonaws.com/tutorials-image/working+of+insertion+sort.png' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
+  * Now the comparison is between 16 and 23. Since, 16 < 23, we swap the two.
 
-##### Fourth Iteration: 
+    - The array becomes [4,8,16,23,42,15].
 
-The last iteration is for the last element (2), with all the preceding elements and make the appropriate swapping between elements.
+  * The last comparison for the iteration is now between 16 and 8. Since 16 > 8, No swap needed.
 
-  * Since, 2< 31. Swap 2 and 31.
+  * The array now becomes [4,8,16,23,42,15]
 
-    - Array now becomes: [13, 17, 25, 2, 31].
+<img src= '/assets/sort/3.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
-  * Compare 2 with 25, 17, 13.
+##### Fifth Iteration: 
 
-    - Array now becomes: [13, 2, 17, 25, 31].
+The last iteration is for the last element (15), with all the preceding elements and make the appropriate swapping between elements.
 
-  * Since 2< 13. Swap 2 and 13.
+  * Since, 15 < 42. Swap them.
+
+    - Array now becomes: [4,8,16,23,15,42].
+
+  * Compare 15 with 23, 16.
+
+    - Array now becomes: [4,8,15,16,23,42].
+
 
 The array now becomes:
 
-**[2, 13, 17, 25, 31]**.
+**[4,8,15,16,23,42]**.
 
 This is the final array after all the corresponding iterations and swapping of elements.
 
-<img src= 'https://s3-us-west-2.amazonaws.com/tutorials-image/insertion-sort.png' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
+<img src= '/assets/sort/4.PNG' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
 ## Final Code
 
