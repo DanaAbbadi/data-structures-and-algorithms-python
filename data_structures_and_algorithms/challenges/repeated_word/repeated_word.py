@@ -1,4 +1,4 @@
-
+import re 
 
 def repeated_word(mystr):
     """
@@ -7,9 +7,10 @@ def repeated_word(mystr):
     try:
         word_list = []
         for word in mystr.split():
-            if word.lower() in word_list:
-                return word.lower()
-            word_list.append(word.lower())
+            word = re.findall(r'[A-Za-z]+', word.lower())
+            if word in word_list:
+                return word[0]
+            word_list.append(word)
         return None
     except AttributeError as error:
         raise error

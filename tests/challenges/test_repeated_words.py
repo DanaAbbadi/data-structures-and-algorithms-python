@@ -9,6 +9,10 @@ def test_anothor_regular_string():
     string = 'Hello, my name is Dana. What id your name ?'
     assert repeated_word(string) == 'name'
 
+def test_punctuation_marks():
+    string = 'It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York...'
+    assert repeated_word(string) == 'summer'
+
 def test_capital_words():
     string = 'Good morning, it feels good to see you again'
     assert repeated_word(string) == 'good'
