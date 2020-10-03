@@ -10,46 +10,59 @@ class Graph:
         self._adjacency_list = {}
 
     def add_node(self, value):
-        node = Node(value)
-        self._adjacency_list[node.value] = []
+        """
+         * Adds a new node to the graph.
+         * Takes in the value of that node.
+         * Returns the added node.
+        """
+        try:
+            node = Node(value)
+            self._adjacency_list[node.value] = []
+            return node
+        except Exception as error:
+            print(f'An error occurred: {error}')        
 
     def add_edge(self, start_node, end_node, weight=1):
-
-        if start_node not in self._adjacency_list or end_node not in self._adjacency_list:
-            raise KeyError('Nodes are not in the graph')
-        
-
-        
-        self._adjacency_list[start_node].append((end_node, weight))
-        self._adjacency_list[end_node].append((start_node, weight))
+        """
+           * Adds a new edge between two nodes in the graph.
+           * Include the ability to have a “weight”.
+           * Takes in the two nodes to be connected by the edge.
+           * Both nodes should already be in the Graph.
+        """
+        try:
+            if start_node not in self._adjacency_list or end_node not in self._adjacency_list:
+                raise KeyError('Nodes are not in the graph')
+            
+            self._adjacency_list[start_node].append((end_node, weight))
+            self._adjacency_list[end_node].append((start_node, weight))
+        except Exception as error:
+            print(f'An error occurred: {error}')
 
     def get_nodes(self):
-        return list(self._adjacency_list.keys())
+        """
+        Returns all of the vertexes in the graph as a collection.
+        """
+        try:
+            return list(self._adjacency_list.keys())
+        except Exception as error:
+            print(f'An error occurred: {error}')   
 
     def get_neighbors(self, node):
-        return self._adjacency_list[node]
-
+        """
+         * Returns a collection of edges connected to the given node.
+         * Takes in a given node.
+         * Include the weight of the connection in the returned collection.
+        """
+        try:
+            return self._adjacency_list[node]
+        except Exception as error:
+            print(f'An error occurred: {error}')   
 
     def size(self):
-        return len(self._adjacency_list)
-
-if __name__ == "__main__":
-    g = Graph()
-
-    # Test add and get nodes
-    g.add_node('a')
-    g.add_node('b')
-    g.add_node('c')
-    print(g.get_nodes())
-
-    # Test size
-    print(g.size())
-
-    # Test add edge
-    g.add_edge('a','b',2)
-    g.add_edge('a','c',9)
-    print(g.get_neighbors('a'))
-
-
-
-  
+        """
+         Returns the total number of nodes in the graph.
+        """
+        try:
+            return len(self._adjacency_list)
+        except Exception as error:
+            print(f'An error occurred: {error}')        

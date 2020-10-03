@@ -76,3 +76,9 @@ The graph class passes the following tests successfully:
 1. The proper size is returned, representing the number of nodes in the graph
 1. A graph with only one node and edge can be properly returned
 1. An empty graph properly returns null
+
+____________________________________________________________________________
+
+## Whiteboard
+
+![graph](/assets/graph.PNG)
