@@ -24,7 +24,7 @@ class Graph:
         self._adjacency_list[end_node].append((start_node, weight))
 
     def get_nodes(self):
-        return self._adjacency_list.keys()
+        return list(self._adjacency_list.keys())
 
     def get_neighbors(self, node):
         return self._adjacency_list[node]
