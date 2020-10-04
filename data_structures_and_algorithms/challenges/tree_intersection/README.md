@@ -1,4 +1,4 @@
-# Tree Insertion
+# Tree Intersection
 
 Author: Dana Al-abbade
 
@@ -6,7 +6,7 @@ _______________________________________
 
 ## Problem Domain
 
-Create a function, that takes two binary trees as inputs and return their insertion. The insertion occurs when two nodes have the same value and location in both trees.
+Create a function, that takes two binary trees as inputs and return their intersection. The intersection occurs when two nodes have the same value and location in both trees.
 
 ___________________________________
 
