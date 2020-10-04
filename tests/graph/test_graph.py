@@ -1,5 +1,5 @@
 from data_structures_and_algorithms.graph.graph import *
-
+import pytest
 
 def test_add_to_graph():
     g = Graph()
@@ -58,3 +58,38 @@ def test_one_node_no_edges():
 def test_empty_graph():
     g = Graph()
     assert g.get_nodes() == []
+
+def test_breadth_first():
+    g = Graph()
+    g.add_node('a')
+    g.add_node('b')
+    g.add_node('c')
+    
+    g.add_edge('a','b',5)
+    g.add_edge('b','c',2)
+    g.add_edge('b','a',9)
+    g.add_edge('c','a',5)
+
+    assert g.breadth_first('a') == ['a','b','c']
+
+def test_breadth_first_not_in_graph():
+    g = Graph()
+    g.add_node('a')
+    g.add_node('b')
+    g.add_node('c')
+
+    with pytest.raises(Exception):
+        g.breadth_first('d')  
+
+def test_breadth_first_start_from_end():
+    g = Graph()
+    g.add_node('a')
+    g.add_node('b')
+    g.add_node('c')
+    
+    g.add_edge('a','b',5)
+    g.add_edge('b','c',1)
+    g.add_edge('b','a',6)
+    g.add_edge('c','a',9)
+
+    assert g.breadth_first('c') == ['c','b','a']
