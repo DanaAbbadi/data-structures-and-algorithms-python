@@ -1,3 +1,7 @@
+# from queue import Queue
+from data_structures_and_algorithms.graph.queue import *
+
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -65,4 +69,51 @@ class Graph:
         try:
             return len(self._adjacency_list)
         except Exception as error:
-            print(f'An error occurred: {error}')        
+            print(f'An error occurred: {error}')    
+
+    
+    def breadth_first(self, start_node):
+        """
+         Traverse the graph using breadth first approach.
+
+         Arguments:
+            start_node: A node in the graph to start traversing from.
+            
+         Output:
+            A list containing all nodes in the graph.
+        """
+        
+        try:
+            if start_node not in self._adjacency_list:
+                    raise KeyError('Nodes are not in the graph')
+
+            q = Queue()
+            q.enqueue(start_node)
+            visited_nodes = {}
+            visited_nodes[start_node] = True
+            output = []
+
+            while len(q):
+                cur = q.dequeue()
+                output.append(cur)
+                neighbors = self._adjacency_list[cur]
+                for n in neighbors:
+                    if n[0] not in visited_nodes:
+                        q.enqueue(n[0]) 
+                    visited_nodes[n[0]] = True
+            return output
+        except Exception as error:
+            print(f'An error occurred: {error}')
+
+if __name__ == "__main__":
+    g = Graph()
+    g.add_node('a')
+    g.add_node('b')
+    g.add_node('c')
+    
+    g.add_edge('a','b',5)
+    g.add_edge('b','c',5)
+    g.add_edge('b','a',5)
+    g.add_edge('c','a',5)
+
+    print(g.breadth_first('c'))
