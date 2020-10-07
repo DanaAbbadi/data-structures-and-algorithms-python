@@ -78,7 +78,7 @@ def test_breadth_first_not_in_graph():
     g.add_node('b')
     g.add_node('c')
 
-    with pytest.raises(Exception):
+    with pytest.raises(KeyError):
         g.breadth_first('d')  
 
 def test_breadth_first_start_from_end():
