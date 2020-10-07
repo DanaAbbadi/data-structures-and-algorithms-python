@@ -36,7 +36,6 @@ class Graph:
         try:
             if start_node not in self._adjacency_list or end_node not in self._adjacency_list:
                 raise KeyError('Nodes are not in the graph')
-            
             self._adjacency_list[start_node].append((end_node, weight))
             self._adjacency_list[end_node].append((start_node, weight))
         except Exception as error:
@@ -83,27 +82,27 @@ class Graph:
             A list containing all nodes in the graph.
         """
         
-        try:
-            if start_node not in self._adjacency_list:
-                    raise KeyError('Nodes are not in the graph')
+        # try:
+        if start_node not in self._adjacency_list:
+                raise KeyError('Nodes are not in the graph')
 
-            q = Queue()
-            q.enqueue(start_node)
-            visited_nodes = {}
-            visited_nodes[start_node] = True
-            output = []
+        q = Queue()
+        q.enqueue(start_node)
+        visited_nodes = {}
+        visited_nodes[start_node] = True
+        output = []
 
-            while len(q):
-                cur = q.dequeue()
-                output.append(cur)
-                neighbors = self._adjacency_list[cur]
-                for n in neighbors:
-                    if n[0] not in visited_nodes:
-                        q.enqueue(n[0]) 
-                    visited_nodes[n[0]] = True
-            return output
-        except Exception as error:
-            print(f'An error occurred: {error}')
+        while len(q):
+            cur = q.dequeue()
+            output.append(cur)
+            neighbors = self._adjacency_list[cur]
+            for n in neighbors:
+                if n[0] not in visited_nodes:
+                    q.enqueue(n[0]) 
+                visited_nodes[n[0]] = True
+        return output
+        # except Exception as error:
+        #     return(f'{error}')
 
 if __name__ == "__main__":
     g = Graph()
